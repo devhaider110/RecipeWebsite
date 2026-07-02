@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Pro | Premium Recipe App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="Recipe.css">
+    
+</head>
+<body>
+
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <header>
+        <nav>
+            <a href="#" class="logo"><i class="fas fa-utensils"></i> GOURMET</a>
+            
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Search recipes (e.g. Pizza, Burger)...">
+                <button class="search-btn" id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="nav-controls">
+                <button class="random-btn" id="randomBtn" title="Surprise Me!"><i class="fas fa-random"></i></button>
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+       
+        <div class="category-filter" id="categoryContainer">
+           
+        </div>
+
+        
+        <div class="view-toggles">
+            <button class="view-btn active" data-view="search"><i class="fas fa-globe"></i> Explore</button>
+            <button class="view-btn" data-view="favorites"><i class="fas fa-heart"></i> My Favorites</button>
+        </div>
+
+       
+        <div class="recipe-grid" id="recipeContainer">
+           
+            <div style="grid-column: 1/-1; text-align:center; padding: 60px 20px; color: var(--text-light);">
+                <i class="fas fa-search fa-4x" style="margin-bottom:25px; opacity:0.2;"></i>
+                <h2 style="font-size: 24px;">What are you craving today?</h2>
+            </div>
+        </div>
+    </main>
+
+    
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="modal-close" id="closeModal"><i class="fas fa-times"></i></button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMsg">Action successful</span>
+    </div>
+ 
+<script src="Recipe.js"></script>
+</body>
+</html>
